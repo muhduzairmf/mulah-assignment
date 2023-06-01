@@ -41,6 +41,8 @@ let charlieValue = 0;
 
 fetchAndParseCSV(csvUrl)
     .then((parsedData) => {
+        console.log(parsedData);
+
         // Create table header
         const headerRow = document.createElement("tr");
 
@@ -66,9 +68,6 @@ fetchAndParseCSV(csvUrl)
             // Insert value for Index and Value column
             td_index.textContent = parsedData[j]["Index #"];
             td_value.textContent = parsedData[j]["Value\r"];
-
-            console.log(parsedData[j]["Index #"]);
-            console.log(parsedData[j]["Value\r"]);
 
             // Conditional statements to get the required variable
             if (parsedData[j]["Index #"] === "A5") {
