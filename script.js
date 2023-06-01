@@ -67,6 +67,9 @@ fetchAndParseCSV(csvUrl)
             td_index.textContent = parsedData[j]["Index #"];
             td_value.textContent = parsedData[j]["Value\r"];
 
+            console.log(parsedData[j]["Index #"]);
+            console.log(parsedData[j]["Value\r"]);
+
             // Conditional statements to get the required variable
             if (parsedData[j]["Index #"] === "A5") {
                 a5 = parseInt(parsedData[j]["Value\r"]);
