@@ -41,8 +41,6 @@ let charlieValue = 0;
 
 fetchAndParseCSV(csvUrl)
     .then((parsedData) => {
-        console.log(parsedData);
-
         // Create table header
         const headerRow = document.createElement("tr");
 
@@ -67,23 +65,21 @@ fetchAndParseCSV(csvUrl)
 
             // Insert value for Index and Value column
             td_index.textContent = parsedData[j]["Index #"];
-            td_value.textContent = parsedData[j]["Value\r"];
-
-            console.log(parsedData[j].Value);
+            td_value.textContent = parsedData[j].Value;
 
             // Conditional statements to get the required variable
             if (parsedData[j]["Index #"] === "A5") {
-                a5 = parseInt(parsedData[j]["Value"]);
+                a5 = parseInt(parsedData[j].Value);
             } else if (parsedData[j]["Index #"] === "A20") {
-                a20 = parseInt(parsedData[j]["Value"]);
+                a20 = parseInt(parsedData[j].Value);
             } else if (parsedData[j]["Index #"] === "A15") {
-                a15 = parseInt(parsedData[j]["Value"]);
+                a15 = parseInt(parsedData[j].Value);
             } else if (parsedData[j]["Index #"] === "A7") {
-                a7 = parseInt(parsedData[j]["Value"]);
+                a7 = parseInt(parsedData[j].Value);
             } else if (parsedData[j]["Index #"] === "A13") {
-                a13 = parseInt(parsedData[j]["Value"]);
+                a13 = parseInt(parsedData[j].Value);
             } else if (parsedData[j]["Index #"] === "A2") {
-                a12 = parseInt(parsedData[j]["Value"]);
+                a12 = parseInt(parsedData[j].Value);
             }
 
             row.appendChild(td_index);
