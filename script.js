@@ -24,7 +24,7 @@ function fetchAndParseCSV(url) {
         });
 }
 
-const csvUrl = "Table_Input.csv";
+const csvUrl = "./Table_Input.csv";
 const table1Header = document.getElementById("table1__header");
 const table1Body = document.getElementById("table1__body");
 
