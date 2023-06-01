@@ -72,17 +72,17 @@ fetchAndParseCSV(csvUrl)
 
             // Conditional statements to get the required variable
             if (parsedData[j]["Index #"] === "A5") {
-                a5 = parseInt(parsedData[j]["Value\r"]);
+                a5 = parseInt(parsedData[j]["Value"]);
             } else if (parsedData[j]["Index #"] === "A20") {
-                a20 = parseInt(parsedData[j]["Value\r"]);
+                a20 = parseInt(parsedData[j]["Value"]);
             } else if (parsedData[j]["Index #"] === "A15") {
-                a15 = parseInt(parsedData[j]["Value\r"]);
+                a15 = parseInt(parsedData[j]["Value"]);
             } else if (parsedData[j]["Index #"] === "A7") {
-                a7 = parseInt(parsedData[j]["Value\r"]);
+                a7 = parseInt(parsedData[j]["Value"]);
             } else if (parsedData[j]["Index #"] === "A13") {
-                a13 = parseInt(parsedData[j]["Value\r"]);
+                a13 = parseInt(parsedData[j]["Value"]);
             } else if (parsedData[j]["Index #"] === "A2") {
-                a12 = parseInt(parsedData[j]["Value\r"]);
+                a12 = parseInt(parsedData[j]["Value"]);
             }
 
             row.appendChild(td_index);
